@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #dfe4ef;
+  --foreground: #111827;
+  --app-navy: #061e57;
+  --app-primary: #1a4e9a;
+  --app-primary-soft: #3f7cff;
+  --app-soft: #d3dcf0;
+  --app-border: #94b4f5;
+  --app-heading: #2e3545;
+  --app-body: #4f5565;
+  --app-muted: #7d8494;
+  --app-surface: #dfe4ef;
+  --chart-blue: #4d89f6;
+  --chart-cyan: #36c3e3;
+  --chart-coral: #ff8585;
+  --chart-purple: #8e7af4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-app-navy: var(--app-navy);
+  --color-app-primary: var(--app-primary);
+  --color-app-primary-soft: var(--app-primary-soft);
+  --color-app-soft: var(--app-soft);
+  --color-app-border: var(--app-border);
+  --color-app-heading: var(--app-heading);
+  --color-app-body: var(--app-body);
+  --color-app-muted: var(--app-muted);
+  --color-app-surface: var(--app-surface);
+  --color-chart-blue: var(--chart-blue);
+  --color-chart-cyan: var(--chart-cyan);
+  --color-chart-coral: var(--chart-coral);
+  --color-chart-purple: var(--chart-purple);
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-sora);
+}
+
+* {
+  border-color: var(--app-border);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(
+      1000px 600px at 100% -100px,
+      rgba(60, 124, 255, 0.18),
+      transparent 60%
+    ),
+    var(--app-surface);
+  color: var(--app-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sora), sans-serif;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #e3ecff;
+  color: #1a4e9a;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fade-up {
+  animation: fade-up 250ms ease-out;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
